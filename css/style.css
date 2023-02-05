@@ -32,6 +32,7 @@
   --team-card-bg-color: rgba(46, 47, 66, 0.08);
   --team-card-bgcolor-two: rgba(46, 47, 66, 0.16);
   --team-card-bgcolor-three: rgba(46, 47, 66, 0.08);
+  --bgcolor-icon-adventages: #F4F4FD;
 }
 
 /* RESET STYLE */
@@ -118,6 +119,7 @@ body {
   line-height: 1.2;
   margin: 0;
   margin-bottom: 8px;
+  margin-top: 8px;
 }
 /* Властивості навігації */
 .navigation.list .list {
@@ -213,6 +215,7 @@ body {
 
 /* Фон для секції головного героя */
 .hero.main {
+  background-color: black;
   background-image: linear-gradient(
     to right,
     var(--hero-background-color),
@@ -422,6 +425,32 @@ a {
 .adventages-list {
   display: flex;
   gap: 24px;
+}
+
+.advantages-icon::before {
+  display: block;
+  content: '';
+  height: 112px;
+  background: var(--bgcolor-icon-adventages);
+border-radius: 4px;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+.icon-antenna::before {
+  background-image: url(../images/);
+}
+
+.icon-clock::before {
+  background-image: url(../images/clock.svg);
+}
+
+.icon-diagram::before {
+  background-image: url(../images/diagram.svg);
+}
+
+.icon-astronaut::before {
+  background-image: url(../images/astronaut.svg);
 }
 
 .filter-buttons {
