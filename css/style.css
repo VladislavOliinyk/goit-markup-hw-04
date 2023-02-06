@@ -40,6 +40,7 @@
   --bgcolor-icon-social-team-hover: #404bbf;
   --till-color-icon-customers: #8e8f99;
   --till-color-icon-customers-hover: rgba(64, 75, 191, 1);
+  --shadow-bt-hero: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* RESET STYLE */
@@ -212,6 +213,7 @@ body {
   border-radius: 4px;
   border: none;
   padding: 16px 32px 16px 32px;
+  box-shadow: var(--shadow-bt-hero);
 }
 
 /* Властивості наведення на кнопку героя */
