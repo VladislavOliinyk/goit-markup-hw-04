@@ -231,6 +231,9 @@ body {
       var(--hero-background-color)
     ),
     url(../images/people-office.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
   text-align: center;
   max-height: 600px;
   max-width: 1440px;
