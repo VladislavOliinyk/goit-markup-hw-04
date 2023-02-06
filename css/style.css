@@ -32,7 +32,14 @@
   --team-card-bg-color: rgba(46, 47, 66, 0.08);
   --team-card-bgcolor-two: rgba(46, 47, 66, 0.16);
   --team-card-bgcolor-three: rgba(46, 47, 66, 0.08);
-  --bgcolor-icon-adventages: #F4F4FD;
+  --bgcolor-icon-adventages: #f4f4fd;
+  --color-title-social-footer: rgba(255, 255, 255, 1);
+  --bgcolor-social-footer: rgba(255, 255, 255, 0.1);
+  --bgcolor-footer-social-hover: rgba(49, 208, 170, 1);
+  --bgcolor-icon-social-team: #4d5ae5;
+  --bgcolor-icon-social-team-hover: #404bbf;
+  --till-color-icon-customers: #8e8f99;
+  --till-color-icon-customers-hover: rgba(64, 75, 191, 1);
 }
 
 /* RESET STYLE */
@@ -217,11 +224,11 @@ body {
 .hero.main {
   background-color: black;
   background-image: linear-gradient(
-    to right,
-    var(--hero-background-color),
-    var(--hero-background-color)
+      to right,
+      var(--hero-background-color),
+      var(--hero-background-color)
     ),
-  url(../images/people-office.jpg);
+    url(../images/people-office.jpg);
   text-align: center;
   max-height: 600px;
   max-width: 1440px;
@@ -242,6 +249,7 @@ body {
 }
 
 .footer {
+  display: flex;
   background-color: var(--title-text-color);
   padding: 100px 0px;
 }
@@ -255,6 +263,49 @@ body {
   line-height: 1.33;
   text-transform: uppercase;
   display: inline-block;
+}
+
+.footer-container {
+  display: flex;
+  gap: 120px;
+}
+
+.social-footer {
+}
+
+.footer-social-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-title-social-footer);
+  display: flex;
+  padding: 0px;
+  margin-bottom: 16px;
+}
+
+.footer-social-list {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-link {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: var(--bgcolor-social-footer);
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  display: flex;
+}
+
+.footer-link:hover {
+  background: var(--bgcolor-footer-social-hover);
+}
+
+.footer-icon {
+  width: 24px;
+  height: 24px;
 }
 
 .our-work {
@@ -287,6 +338,33 @@ body {
   padding-bottom: 120px;
 }
 
+.social-team {
+  display: flex;
+  padding: 0px;
+  gap: 24px;
+  margin: auto;
+  width: 232px;
+  height: 40px;
+  margin-bottom: 32px;
+}
+
+.icon-social-team {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  display: flex;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: var(--bgcolor-icon-social-team);
+  cursor: pointer;
+}
+
+.icon-social-team:hover {
+  background: var(--bgcolor-icon-social-team-hover);
+}
+
 /* Властивості абзаців секцій */
 .section-text {
   font-size: 16px;
@@ -300,7 +378,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 8px;
   text-align: center;
 }
 
@@ -343,6 +421,34 @@ a {
   font-style: normal;
 }
 
+.customers {
+  padding-top: 130px;
+  padding-bottom: 120px;
+}
+
+.customers-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.customers-icon {
+  display: flex;
+  padding: 16px 32px;
+  display: flex;
+  width: 168px;
+  height: 88px;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  fill: var(--till-color-icon-customers);
+  cursor: pointer;
+}
+
+.customers-icon:hover {
+  fill: var(--till-color-icon-customers-hover);
+  border: 1px solid #404bbf;
+}
+
 /* Властивості для сторінки Portfolio */
 
 /* Властивості для фільтра */
@@ -357,6 +463,12 @@ a {
   letter-spacing: 0.04em;
   line-height: 1.5;
   padding: 12px 24px;
+  /* box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12); */
+}
+
+.filter-button:hover,
+.filter-button:focus {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -427,30 +539,13 @@ a {
   gap: 24px;
 }
 
-.advantages-icon::before {
+.advantages-icon {
   display: block;
-  content: '';
+  width: 264px;
   height: 112px;
   background: var(--bgcolor-icon-adventages);
-border-radius: 4px;
-background-repeat: no-repeat;
-background-position: center;
-}
-
-.icon-antenna::before {
-  background-image: url(../images/);
-}
-
-.icon-clock::before {
-  background-image: url(../images/clock.svg);
-}
-
-.icon-diagram::before {
-  background-image: url(../images/diagram.svg);
-}
-
-.icon-astronaut::before {
-  background-image: url(../images/astronaut.svg);
+  border-radius: 4px;
+  padding: 24px 100px;
 }
 
 .filter-buttons {
@@ -476,6 +571,11 @@ background-position: center;
   width: calc((100% - 48px) / 3);
   margin-right: 24px;
   margin-bottom: 48px;
+}
+
+.portfolio-item:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-item:nth-child(3n) {
