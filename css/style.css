@@ -545,12 +545,13 @@ a {
 }
 
 .advantages-icon {
-  display: block;
+  display: flex;
   width: 264px;
   height: 112px;
   background: var(--bgcolor-icon-adventages);
   border-radius: 4px;
-  padding: 24px 100px;
+  align-items: center;
+  justify-content: center;
 }
 
 .filter-buttons {
