@@ -439,14 +439,14 @@ a {
 
 .customers-icon {
   display: flex;
-  padding: 16px 32px;
-  display: flex;
   width: 168px;
   height: 88px;
   border: 1px solid #8e8f99;
   border-radius: 4px;
   fill: var(--till-color-icon-customers);
   cursor: pointer;
+  justify-content: center;
+  align-items: center;
 }
 
 .customers-icon:hover {
