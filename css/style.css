@@ -41,6 +41,9 @@
   --till-color-icon-customers: #8e8f99;
   --till-color-icon-customers-hover: rgba(64, 75, 191, 1);
   --shadow-bt-hero: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  --shadow-portfolio-items: 0px 1px 6px rgba(46, 47, 66, 0.08),
+  0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+
 }
 
 /* RESET STYLE */
@@ -254,7 +257,6 @@ body {
 }
 
 .footer {
-  display: flex;
   background-color: var(--title-text-color);
   padding: 100px 0px;
 }
@@ -275,15 +277,11 @@ body {
   gap: 120px;
 }
 
-.social-footer {
-}
-
 .footer-social-title {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   color: var(--color-title-social-footer);
-  display: flex;
   padding: 0px;
   margin-bottom: 16px;
 }
@@ -484,9 +482,9 @@ a {
   background-color: var(--navigation-hover-color);
 }
 
-/* ПРибираэмо підкреслення лінків */
-.portfolio-link {
-  text-decoration: none;
+.portfolio-link:hover,
+.portfolio-link:focus {
+  box-shadow: var(--shadow-portfolio-items);
 }
 
 /* Властивості заготовків секції портфоліо */
@@ -577,11 +575,6 @@ a {
   width: calc((100% - 48px) / 3);
   margin-right: 24px;
   margin-bottom: 48px;
-}
-
-.portfolio-item:hover {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-item:nth-child(3n) {
