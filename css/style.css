@@ -348,9 +348,10 @@ body {
   padding: 0px;
   gap: 24px;
   margin: auto;
-  width: 232px;
-  height: 40px;
   margin-bottom: 32px;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
 }
 
 .icon-social-team {
